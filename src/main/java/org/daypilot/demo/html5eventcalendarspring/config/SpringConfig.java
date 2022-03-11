@@ -28,13 +28,11 @@ public class SpringConfig {
     @Autowired
     EmailNotification emailNotification;
 
-    HashMap<Object, Object> map = new HashMap<>();
-
-    @Scheduled(fixedDelay = 120000)
+    @Scheduled(fixedDelay = 28800000)
     public void scheduleFixedDelayTask() {
 
         System.out.println(
-                "Fixed delay task - " + System.currentTimeMillis() / 120000);
+                "Fixed delay task - " + System.currentTimeMillis() / 28800000);
 
         LocalDate toLocalDate = LocalDateTime.now().toLocalDate();
         String str = toLocalDate.toString() + " 00:00";
