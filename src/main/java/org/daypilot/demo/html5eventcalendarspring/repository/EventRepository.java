@@ -16,7 +16,5 @@ public interface EventRepository extends JpaRepository<Event, Long> {
 
     Iterable<Event> findEventByStartEquals(LocalDateTime date);
 
-    List<Event> findAllByStartAfter(LocalDateTime today);
-
     List<Event> findAllByStartEquals(LocalDateTime today);
 }
